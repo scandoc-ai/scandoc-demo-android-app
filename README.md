@@ -16,7 +16,7 @@ Android Studio supports add-to-app flows on Android Studio 2022.2 or later with 
 
 To depend on our AAR, the host app must be able to find these files.
 
-To do that, edit settings.gradle in your host app so that it includes the local repository and the dependency (check our sample app for a working example):
+To do that, edit settings.gradle in your host app so that it includes our maven repository and flutter dependency (check our sample app for a working example):
 
 ```gradle
 String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
@@ -26,8 +26,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url 'http://maven.scandoc.ai/repository/maven-releases/'
-            allowInsecureProtocol true
+            url 'https://maven.scandoc.ai/repository/maven-releases/'
         }
         maven {
             url "$storageUrl/download.flutter.io"

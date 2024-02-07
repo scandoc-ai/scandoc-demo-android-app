@@ -13,8 +13,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url 'http://maven.scandoc.ai/repository/maven-releases/'
-            allowInsecureProtocol true
+            url 'https://maven.scandoc.ai/repository/maven-releases/'
         }
         maven {
             url "$storageUrl/download.flutter.io"
