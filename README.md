@@ -18,7 +18,7 @@ To depend on our AAR, the host app must be able to find these files.
 
 To do that, edit settings.gradle in your host app so that it includes the local repository and the dependency (check our sample app for a working example):
 
-```python
+```gradle
 String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -39,7 +39,7 @@ dependencyResolutionManagement {
 #### Add the ScanDoc screen to your app
 
 Add the following XML to your AndroidManifest.xml file under your application tag:
-```
+```xml
 <activity
   android:name="io.flutter.embedding.android.FlutterActivity"
   android:theme="@style/LaunchTheme"
@@ -50,14 +50,14 @@ Add the following XML to your AndroidManifest.xml file under your application ta
 ```
 
 Add the following permissions:
-```
+```xml
 <uses-permission android:name="android.permission.CAMERA"/>
 <uses-feature android:name="android.hardware.camera" android:required="true"/>
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
 Add a scan button that launches the ScanDoc activity:
-```
+```kotlin
 Button(onClick = {
     val flutterEngine = FlutterEngine(this)
 
