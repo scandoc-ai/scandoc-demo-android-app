@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Scandoc test application</string>
+    <string name="title_activity_scan_doc">ScanDocActivity</string>
+</resources>
