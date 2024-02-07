@@ -55,6 +55,15 @@ Add the following permissions:
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
+Add dependancy to your build.gradle file
+```gradle
+dependencies {
+    # Your other dependancies
+    ...
+    implementation 'ai.scandoc:flutter_release:1.0'
+}
+```
+
 Add a scan button that launches the ScanDoc activity:
 ```kotlin
 Button(onClick = {
