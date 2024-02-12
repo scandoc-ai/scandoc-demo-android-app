@@ -60,7 +60,7 @@ Add dependancy to your build.gradle file
 dependencies {
     # Your other dependancies
     ...
-    implementation 'ai.scandoc:flutter_release:1.0'
+    implementation 'ai.scandoc:flutter_release:1.1'
 }
 ```
 
